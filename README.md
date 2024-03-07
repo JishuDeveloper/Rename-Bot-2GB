@@ -23,23 +23,22 @@
 
 ### DEPLOYEMENT SUPPORT
 
-<details><summary>Deploy To Koyeb</summary>
+<summary>Deploy To Koyeb</summary>
 <p>
 <br>                 
 <a target="/blank" href="https://app.koyeb.com/deploy?type=git&repository=github.com/JishuDeveloper/Rename-Bot-2GB&branch=main&name=rename-bot-2gb" >
   <img src="https://www.koyeb.com/static/images/deploy/button.svg" alt="Deploy">
 </a>
 </p>
-</details>
 
-<details><summary>Deploy To Heroku</summary>
+
+<summary>Deploy To Heroku</summary>
 <p>
 <br>
 <a href="https://heroku.com/deploy?template=https://github.com/JishuDeveloper/Rename-Bot-2GB">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 </p>
-</details>
 
 
 
