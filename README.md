@@ -10,11 +10,11 @@
 ### CONFIGS VARIABLES
 
 * `BOT_TOKEN`  - Get bot token from <a href="https://t.me/BotFather" target="/blank">Bot Father</a>
-* `API_ID` - From my.telegram.org
-* `API_HASH` - From my.telegram.org
+* `API_ID` - Get API ID from <a href="https://my.telegram.org" target="/blank">Telegram Auth</a>
+* `API_HASH` - Get API HASH from <a href="https://my.telegram.org" target="/blank">Telegram Auth</a>
 * `ADMIN` - Admin user id
 * `LOG_CHANNEL` - Bot Log Channel ⚠️ Id startswith -100 must.
-* `DB_URL`  - Mongo Database URL from https://cloud.mongodb.com
+* `DB_URL`  - Mongo Database URL from <a href="https://cloud.mongodb.com" target="/blank">Mongo DB</a>
 * `DB_NAME`  - Your database name from mongoDB. `Optional`
 * `FORCE_SUB` - Your force sub channel username without @ `Optional`
 * `START_PIC` - Start message photo. `Optional`
