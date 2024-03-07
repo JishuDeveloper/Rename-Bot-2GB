@@ -10,8 +10,8 @@
 ### CONFIGS VARIABLES
 
 * `BOT_TOKEN`  - Get bot token from <a href="https://t.me/BotFather" target="/blank">Bot Father</a>
-* `API_ID` - Get API ID from <a href="https://my.telegram.org" target="/blank">Telegram Auth</a>
-* `API_HASH` - Get API HASH from <a href="https://my.telegram.org" target="/blank">Telegram Auth</a>
+* `API_ID` - Get api id from <a href="https://my.telegram.org" target="/blank">Telegram Auth</a>
+* `API_HASH` - Get api hash from <a href="https://my.telegram.org" target="/blank">Telegram Auth</a>
 * `ADMIN` - Admin user id
 * `LOG_CHANNEL` - Bot Log Channel ⚠️ Id startswith -100 must.
 * `DB_URL`  - Mongo Database URL from <a href="https://cloud.mongodb.com" target="/blank">Mongo DB</a>
