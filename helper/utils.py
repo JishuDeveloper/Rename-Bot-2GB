@@ -82,6 +82,41 @@ async def send_log(b, u):
 
 
 
+def add_prefix_suffix(input_string, prefix='', suffix=''):
+    pattern = r'(?P<filename>.*?)(\.\w+)?$'
+    match = re.search(pattern, input_string)
+    if match:
+        filename = match.group('filename')
+        extension = match.group(2) or ''
+        if prefix == None:
+            if suffix == None:
+                return f"{filename}{extension}"
+            return f"{filename} {suffix}{extension}"
+        elif suffix == None:
+            if prefix == None:
+               return f"{filename}{extension}"
+            return f"{prefix}{filename}{extension}"
+        else:
+            return f"{prefix}{filename} {suffix}{extension}"
+
+
+    else:
+        return input_string
+
+
+
+def makedir(name: str):
+    """
+    Create a directory with the specified name.
+    If a directory with the same name already exists, it will be removed and a new one will be created.
+    """
+
+    if os.path.exists(name):
+        shutil.rmtree(name)
+    os.mkdir(name)
+
+
+
 
 # Jishu Developer 
 # Don't Remove Credit 🥺
