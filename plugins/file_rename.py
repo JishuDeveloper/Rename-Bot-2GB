@@ -5,7 +5,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ForceRepl
 from hachoir.metadata import extractMetadata
 from helper.ffmpeg import fix_thumb, take_screen_shot
 from hachoir.parser import createParser
-from helper.utils import progress_for_pyrogram, convert, humanbytes
+from helper.utils import progress_for_pyrogram, convert, humanbytes, add_prefix_suffix
 from helper.database import jishubotz
 from asyncio import sleep
 from PIL import Image
