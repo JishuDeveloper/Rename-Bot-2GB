@@ -9,7 +9,7 @@ from helper.utils import progress_for_pyrogram, convert, humanbytes, add_prefix_
 from helper.database import jishubotz
 from asyncio import sleep
 from PIL import Image
-import os, time
+import os, time, re, random, asyncio
 
 
 @Client.on_message(filters.private & (filters.document | filters.audio | filters.video))
