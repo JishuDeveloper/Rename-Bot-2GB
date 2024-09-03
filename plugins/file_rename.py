@@ -3,7 +3,7 @@ from pyrogram.enums import MessageMediaType
 from pyrogram.errors import FloodWait
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ForceReply
 from hachoir.metadata import extractMetadata
-from helper.ffmpeg import fix_thumb, take_screen_shot
+from helper.ffmpeg import fix_thumb, take_screen_shot, add_metadata
 from hachoir.parser import createParser
 from helper.utils import progress_for_pyrogram, convert, humanbytes, add_prefix_suffix
 from helper.database import jishubotz
@@ -88,39 +88,22 @@ async def doc(bot, update):
     file_path = f"downloads/{update.from_user.id}/{new_filename}"
     file = update.message.reply_to_message
 
-    ms = await update.message.edit("`Trying To Downloading`")    
+    ms = await update.message.edit("🚀 Try To Download...  ⚡")    
     try:
-     	path = await bot.download_media(message=file, file_name=file_path, progress=progress_for_pyrogram,progress_args=("`Download Started....`", ms, time.time()))                    
+     	path = await bot.download_media(message=file, file_name=file_path, progress=progress_for_pyrogram,progress_args=("🚀 Try To Downloading...  ⚡", ms, time.time()))                    
     except Exception as e:
      	return await ms.edit(e)
-     	     
+    
 
     # Metadata Adding Code
-    _bool_metadata = await jishubotz.get_metadata(update.message.chat.id)  
+    _bool_metadata = await jishubotz.get_metadata(update.message.chat.id) 
     
-    if (_bool_metadata):
-        metadata_path = f"Metadata/{new_filename}"
+    if _bool_metadata:
         metadata = await jishubotz.get_metadata_code(update.message.chat.id)
-        if metadata:
-
-            await ms.edit("I Found Your Metadata\n\n__Please Wait...__\n`Adding Metadata To File...`")
-            cmd = f"""ffmpeg -i "{path}" {metadata} "{metadata_path}" """
-
-            process = await asyncio.create_subprocess_shell(
-                cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-            )
-
-            stdout, stderr = await process.communicate()
-            er = stderr.decode()
-
-            try:
-                if er:
-                    return await ms.edit(str(er) + "\n\n**Error**")
-            except BaseException:
-                pass
-        await ms.edit("**Metadata Added To The File Successfully ✅**\n\n__**Please Wait...**__\n\n`Trying To Downloading`")
+        metadata_path = f"Metadata/{new_filename}"
+        await add_metadata(path, metadata_path, metadata, ms)
     else:
-        await ms.edit("`Trying To Downloading`") 
+        await ms.edit("⏳ Mode Changing...  ⚡")
 
     duration = 0
     try:
@@ -159,7 +142,7 @@ async def doc(bot, update):
                  print(e)  
 
 
-    await ms.edit("`Trying To Uploading`")
+    await ms.edit("💠 Try To Upload...  ⚡")
     type = update.data.split("_")[1]
     try:
         if type == "document":
@@ -169,7 +152,7 @@ async def doc(bot, update):
                 thumb=ph_path, 
                 caption=caption, 
                 progress=progress_for_pyrogram,
-                progress_args=("`Upload Started....`", ms, time.time()))
+                progress_args=("💠 Try To Uploading...  ⚡", ms, time.time()))
 
         elif type == "video": 
             await bot.send_video(
@@ -179,7 +162,7 @@ async def doc(bot, update):
                 thumb=ph_path,
                 duration=duration,
                 progress=progress_for_pyrogram,
-                progress_args=("`Upload Started....`", ms, time.time()))
+                progress_args=("💠 Try To Uploading...  ⚡", ms, time.time()))
 
         elif type == "audio": 
             await bot.send_audio(
@@ -189,7 +172,7 @@ async def doc(bot, update):
                 thumb=ph_path,
                 duration=duration,
                 progress=progress_for_pyrogram,
-                progress_args=("`Upload Started....`", ms, time.time()))
+                progress_args=("💠 Try To Uploading...  ⚡", ms, time.time()))
 
 
     except Exception as e:          
