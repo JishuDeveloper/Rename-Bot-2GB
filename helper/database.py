@@ -12,12 +12,12 @@ class Database:
     def new_user(self, id):
         return dict(
             _id=int(id),                                   
-            file_id=None,
-            caption=None,
-            prefix=None,
-            suffix=None,
-            metadata=False,
-            metadata_code=""" -map 0 -c:s copy -c:a copy -c:v copy -metadata title="Encoded By :- @Madflix_Bots" -metadata author="@JishuDeveloper" -metadata:s:s title="Subtitled By :- @Madflix_Bots" -metadata:s:a title="By :- @Madflix_Bots" -metadata:s:v title="Encoded By :- @Madflix_Bots" """
+            file_id = None,
+            caption = None,
+            prefix = None,
+            suffix = None,
+            metadata = False,
+            metadata_code = "By :- @Madflix_Bots"
         )
 
     async def add_user(self, b, m):
