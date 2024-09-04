@@ -179,10 +179,6 @@ async def doc(bot, update):
         os.remove(file_path)
         if ph_path:
             os.remove(ph_path)
-        if metadata_path:
-            os.remove(metadata_path)
-        if path:
-            os.remove(path)
         return await ms.edit(f"**Error :** `{e}`")    
  
     await ms.delete() 
@@ -190,8 +186,6 @@ async def doc(bot, update):
         os.remove(ph_path)
     if file_path:
         os.remove(file_path)
-    if metadata_path:
-        os.remove(metadata_path)
 
 
 
