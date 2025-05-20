@@ -94,7 +94,7 @@ async def add_metadata(input_path, output_path, metadata, ms):
             await ms.edit("<i>Failed To Add Metadata To Your File ❌</i>")
             return None
     except Exception as e:
-        print(f"Error occurred while adding metadata: {str(e)}")
+        print(f"Error Occurred While Adding Metadata : {str(e)}")
         await ms.edit("<i>An Error Occurred While Adding Metadata To Your File ❌</i>")
         return None
 
@@ -105,5 +105,5 @@ async def add_metadata(input_path, output_path, metadata, ms):
 
 # Jishu Developer 
 # Don't Remove Credit 🥺
-# Telegram Channel @JishuBotz & @Madflix_Bots
+# Telegram Channel @JishuBotz & @MadflixBotz
 # Developer @JishuDeveloper
