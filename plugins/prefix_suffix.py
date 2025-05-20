@@ -6,9 +6,9 @@ from helper.database import jishubotz
 async def add_caption(client, message):
 
     if len(message.command) == 1:
-        return await message.reply_text("**__Give The Prefix__\n\nExample:- `/set_prefix @Madflix_Bots`**")
+        return await message.reply_text("**__Give The Prefix__\n\nExample:- `/set_prefix @MadflixBotz`**", quote=True)
     prefix = message.text.split(" ", 1)[1]
-    JishuDeveloper = await message.reply_text("Please Wait ...")
+    JishuDeveloper = await message.reply_text("Please Wait ...", quote=True)
     await jishubotz.set_prefix(message.from_user.id, prefix)
     await JishuDeveloper.edit("**Prefix Saved Successfully ✅**")
 
@@ -16,7 +16,7 @@ async def add_caption(client, message):
 @Client.on_message(filters.private & filters.command('del_prefix'))
 async def delete_prefix(client, message):
 
-    JishuDeveloper = await message.reply_text("Please Wait ...")
+    JishuDeveloper = await message.reply_text("Please Wait ...", quote=True)
     prefix = await jishubotz.get_prefix(message.from_user.id)
     if not prefix:
         return await JishuDeveloper.edit("**You Don't Have Any Prefix ❌**")
@@ -27,7 +27,7 @@ async def delete_prefix(client, message):
 @Client.on_message(filters.private & filters.command('see_prefix'))
 async def see_caption(client, message):
 
-    JishuDeveloper = await message.reply_text("Please Wait ...")
+    JishuDeveloper = await message.reply_text("Please Wait ...", quote=True)
     prefix = await jishubotz.get_prefix(message.from_user.id)
     if prefix:
         await JishuDeveloper.edit(f"**Your Prefix :-**\n\n`{prefix}`")
@@ -40,9 +40,9 @@ async def see_caption(client, message):
 async def add_csuffix(client, message):
 
     if len(message.command) == 1:
-        return await message.reply_text("**__Give The Suffix__\n\nExample:- `/set_suffix @Madflix_Bots`**")
+        return await message.reply_text("**__Give The Suffix__\n\nExample:- `/set_suffix @MadflixBotz`**", quote=True)
     suffix = message.text.split(" ", 1)[1]
-    JishuDeveloper = await message.reply_text("Please Wait ...")
+    JishuDeveloper = await message.reply_text("Please Wait ...", quote=True)
     await jishubotz.set_suffix(message.from_user.id, suffix)
     await JishuDeveloper.edit("**Suffix Saved Successfully ✅**")
 
@@ -50,7 +50,7 @@ async def add_csuffix(client, message):
 @Client.on_message(filters.private & filters.command('del_suffix'))
 async def delete_suffix(client, message):
 
-    JishuDeveloper = await message.reply_text("Please Wait ...")
+    JishuDeveloper = await message.reply_text("Please Wait ...", quote=True)
     suffix = await jishubotz.get_suffix(message.from_user.id)
     if not suffix:
         return await JishuDeveloper.edit("**You Don't Have Any Suffix ❌**")
@@ -61,7 +61,7 @@ async def delete_suffix(client, message):
 @Client.on_message(filters.private & filters.command('see_suffix'))
 async def see_csuffix(client, message):
 
-    JishuDeveloper = await message.reply_text("Please Wait ...")
+    JishuDeveloper = await message.reply_text("Please Wait ...", quote=True)
     suffix = await jishubotz.get_suffix(message.from_user.id)
     if suffix:
         await JishuDeveloper.edit(f"**Your Suffix :-**\n\n`{suffix}`")
