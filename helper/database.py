@@ -17,7 +17,7 @@ class Database:
             prefix = None,
             suffix = None,
             metadata = False,
-            metadata_code = "By :- @Madflix_Bots"
+            metadata_code = "By :- @MadflixBotz"
         )
 
     async def add_user(self, b, m):
@@ -110,7 +110,7 @@ class Database:
 
 
 
-jishubotz = Database(Config.DB_URL, Config.DB_NAME)
+jishubotz = Database(Config.DATABASE_URL, Config.DATABASE_NAME)
 
 
 
