@@ -19,7 +19,7 @@ async def get_stats(bot, message):
     total_users = await jishubotz.total_users_count()
     uptime = time.strftime("%Hh%Mm%Ss", time.gmtime(time.time() - bot.uptime))    
     start_t = time.time()
-    st = await message.reply('**Processing The Details.....**')    
+    st = await message.reply('**Processing The Details.....**', quote=True)    
     end_t = time.time()
     time_taken_s = (end_t - start_t) * 1000
     await st.edit(text=f"**--Bot Status--** \n\n**⌚ Bot Uptime:** `{uptime}` \n**🐌 Current Ping:** `{time_taken_s:.3f} ms` \n**👭 Total Users:** `{total_users}`")
@@ -38,7 +38,7 @@ async def restart_bot(bot, message):
 @Client.on_message(filters.private & filters.command(["ping", "p"]))
 async def ping(_, message):
     start_t = time.time()
-    rm = await message.reply_text("Pinging....")
+    rm = await message.reply_text("Pinging....", quote=True)
     end_t = time.time()
     time_taken_s = (end_t - start_t) * 1000
     await rm.edit(f"Ping 🔥!\n{time_taken_s:.3f} ms")
@@ -51,7 +51,7 @@ async def broadcast_handler(bot: Client, m: Message):
     await bot.send_message(Config.LOG_CHANNEL, f"{m.from_user.mention} or {m.from_user.id} Is Started The Broadcast......")
     all_users = await jishubotz.get_all_users()
     broadcast_msg = m.reply_to_message
-    sts_msg = await m.reply_text("Broadcast Started..!") 
+    sts_msg = await m.reply_text("Broadcast Started..!", quote=True) 
     done = 0
     failed = 0
     success = 0
