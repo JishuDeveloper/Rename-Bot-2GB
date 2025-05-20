@@ -17,7 +17,7 @@ async def rename_start(client, message):
     file = getattr(message, message.media.value)
     filename = file.file_name  
     if file.file_size > 2000 * 1024 * 1024:
-         return await message.reply_text("Sorry Bro This Bot Doesn't Support Uploading Files Bigger Than 2GB")
+         return await message.reply_text("Sorry Bro This Bot Doesn't Support Uploading Files Bigger Than 2GB", quote=True)
 
     try:
         await message.reply_text(
@@ -125,7 +125,7 @@ async def doc(bot, update):
          try:
              caption = c_caption.format(filename=new_filename, filesize=humanbytes(media.file_size), duration=convert(duration))
          except Exception as e:
-             return await ms.edit(text=f"Your Caption Error Except Keyword Argument: ({e})")             
+             return await ms.edit(text=f"Your Caption Error Except Keyword Argument : ({e})")             
     else:
          caption = f"**{new_filename}**"
  
