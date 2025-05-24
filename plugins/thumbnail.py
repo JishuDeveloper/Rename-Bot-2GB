@@ -30,5 +30,7 @@ async def addthumbs(client, message):
 
 # Jishu Developer 
 # Don't Remove Credit 🥺
-# Telegram Channel @JishuBotz
+# Telegram Channel @MadflixBotz
+# Backup Channel @JishuBotz
 # Developer @JishuDeveloper
+# Contact @MadflixSupport
