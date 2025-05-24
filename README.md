@@ -1,7 +1,7 @@
 <img src="https://graph.org/file/77d2eddf9657a87acb881.jpg" alt="logo" target="/blank">
 
 <h1 align="center">
- <b><a href="https://t.me/itachi_rename_bot" target="/blank"> Rename Bot 2GB </a></>
+ <b><a href="https://t.me/Itachi_Rename_Robot" target="/blank"> Rename Bot 2GB </a></>
 </h1>
 
 <p align="center">🩵 Thanks for Being Here 🩵</p>
@@ -14,9 +14,9 @@
 * `API_HASH` - Get api hash from <a href="https://my.telegram.org" target="/blank">Telegram Auth</a>
 * `ADMIN` - Admin user id
 * `LOG_CHANNEL` - Bot Log Channel ⚠️ Id startswith -100 must.
-* `DB_URL`  - Mongo Database URL from <a href="https://cloud.mongodb.com" target="/blank">Mongo DB</a>
-* `DB_NAME`  - Your database name from mongoDB. `Optional`
-* `FORCE_SUB` - Your force sub channel username without @ `Optional`
+* `DATABASE_URL`  - Mongo Database URL from <a href="https://cloud.mongodb.com" target="/blank">Mongo DB</a>
+* `DATABASE_NAME`  - Your database name from mongoDB. `Optional`
+* `FORCE_SUBS` - Your force sub channel username without @ `Optional`
 * `START_PIC` - Start message photo. `Optional`
 
 
@@ -89,12 +89,12 @@ status - Check bot status [FOR ADMINS USE ONLY].
 - [lntechnical](https://github.com/lntechnical2)
 
 ### 😍 BOTS CHANNEL 😍
-- [Madflix Botz](https://t.me/Madflix_Bots)
+- [Madflix Botz](https://t.me/MadflixBotz)
 - [Jishu Botz](https://t.me/JishuBotz)
 
 ### 💕 CONTACT DEVELOPER 💕
 - [Jishu Developer](https://t.me/JishuDeveloper)
-- [Madflix Official](https://t.me/MadflixOfficials)
+- [Madflix Official](https://t.me/MadflixSupport)
 
 ### ☕ BUY ME A COFFEE ☕
 - [PayPal](https://paypal.me/jishudeveloper/2.50USD)
