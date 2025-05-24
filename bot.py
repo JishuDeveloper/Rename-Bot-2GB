@@ -57,5 +57,7 @@ Bot().run()
 
 # Jishu Developer 
 # Don't Remove Credit 🥺
-# Telegram Channel @JishuBotz
+# Telegram Channel @MadflixBotz
+# Backup Channel @JishuBotz
 # Developer @JishuDeveloper
+# Contact @MadflixSupport
