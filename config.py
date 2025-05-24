@@ -10,8 +10,8 @@ class Config(object):
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
    
     # database config
-    DATABASE_NAME = os.environ.get("DB_NAME","")     
-    DATABASE_URL  = os.environ.get("DB_URL","")
+    DATABASE_NAME = os.environ.get("DATABASE_NAME","")     
+    DATABASE_URL  = os.environ.get("DATABASE_URL","")
  
     # other configs
     BOT_UPTIME  = time.time()
