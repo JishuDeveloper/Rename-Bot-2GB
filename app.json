@@ -20,7 +20,7 @@
             "value": "False",
             "required": false
         },
-        "FORCE_SUB": {
+        "FORCE_SUBS": {
             "description": "Your force sub channel user name without [@] ",
             "value": "",
             "required": false 
@@ -40,14 +40,14 @@
             "value": "",
             "required": true          
         },
-        "DB_URL": {
+        "DATABASE_URL": {
             "description": "Your Mongo DB URL Obtained From mongodb.com",
             "value": "",
             "required": true
         },
-        "DB_NAME":{ 
+        "DATABASE_NAME":{ 
             "description":"Your Mongo DB Database Name ",
-            "value": "jishu-botz",
+            "value": "MadflixBotz",
             "required": false
         },
         "START_PIC": {
